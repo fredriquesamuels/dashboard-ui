@@ -1,0 +1,32 @@
+<svg height="100%" width="100%" viewBox="75 0 950 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <g id="logo">
+    <polyline points="75,75 175,0 425,0 525,75 525,200 425,125 350,125 350,175 400,175 488,241 434,301 400,275 350,275 350,394 300,450 250,394 250,275 200,275 166,301 112,241 200,175 250,175 250,125 175,125 75,200" style="fill:SlateGrey ;" />
+    </g>
+    <filter id="shadow" x="-200%" y="-200%" width="800%" height="800%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+    </filter>
+  	<g id="shadowed_logo">
+       <use xlink:href="#logo" x="0" y="0"/>
+    <!--use xlink:href="#logo" x="4" y="4" filter="url(#shadow)"/-->
+    <ellipse cx="300" cy="500" rx="225" ry="5" style="fill:SlateGrey ;opacity:.5;" filter="url(#shadow)" />
+    </g>
+  	<g id="text">
+    <text x="400" y="150" fill="SlateGrey " style="font-family:FF Meta;font-size:70px;">TEC-TENDENCIES</text>
+
+     <ellipse cx="700" cy="250" rx="300" ry="1" style="fill:SlateGrey ;opacity:.5;" filter="url(#shadow)" />
+    </g>
+  </defs>
+
+  <use xlink:href="#shadowed_logo" x="200" y="0"  transform="scale(.5,.5)">
+  <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1.5s" />
+  </use>
+
+  <use xlink:href="#text" x="0" y="0" style="opacity:0">
+  <animate attributeType="CSS" attributeName="opacity" from="0" to="1" begin="2s" dur="1.5s" fill="freeze" />
+  <animateMotion path="M -40 0 L -20 0" begin="2s" dur="1.5s" fill="freeze" />
+  </use>
+
+  Sorry, your browser does not support inline SVG.
+</svg>
